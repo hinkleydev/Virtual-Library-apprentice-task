@@ -3,7 +3,7 @@ const Media = require("./Media");
 
 // create your Movie class:
 class Movie extends Media {
-  constructor(director, duration, rating, title, year, genre) {
+  constructor(title, year, genre, director, duration, rating) {
     super(title, year, genre);
     this.director = director;
     this.rating = rating;
@@ -13,7 +13,7 @@ class Movie extends Media {
     }
   }
   summary() {
-    return `Title: ${this.title}, Director: ${this.director}, Year: ${this.year}, Genre: ${this.genre}, Duration: ${this.duration}minutes, Rating: ${this.rating}`;
+    return `Title: ${this.title}, Director: ${this.director}, Year: ${this.year}, Genre: ${this.genre}, Rating: ${this.rating}`;
   }
   static sortByDuration(arr) {
     return arr.sort((a, b) => {
